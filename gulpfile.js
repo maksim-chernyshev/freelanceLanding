@@ -21,7 +21,7 @@ exports.styles = styles;
 exports.default = parallel(styles, scripts, browsersync, startwatch);
 
 function styles() {
-    return src('resources/css/main.scss')
+    return src('src/css/main.scss')
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(concat('main.min.css'))
         .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'], grid: true}))
@@ -31,7 +31,7 @@ function styles() {
 }
 
 function scripts() {
-    return src('resources/js/main.js')
+    return src('src/js/main.js')
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('public/js/'))
@@ -39,7 +39,7 @@ function scripts() {
 }
 
 function startwatch() {
-    watch(['resources/**/*.js', '!src/**/*.min.js'], scripts);
-    watch('resources/css/**/*.scss', styles);
+    watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
+    watch('src/css/**/*.scss', styles);
     watch('public/**/*.html').on('change', browserSync.reload);
 }
