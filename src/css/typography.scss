@@ -1,0 +1,38 @@
+.heading {
+  font-family: 'Gotham Pro Bold', sans-serif;
+  line-height: 1;
+  font-weight: 700;
+
+  &--1 {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-m);
+  }
+
+  &--2 {
+    font-size: var(--font-size-m);
+  }
+}
+
+.text {
+  font-family: 'Gotham Pro Medium', sans-serif;
+  line-height: 1;
+
+  &--m {
+    font-family: 'Gotham Pro Regular', sans-serif;
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-l);
+  }
+
+  &--l {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-l);
+  }
+
+  &--xl {
+    font-size: var(--font-size-s);
+  }
+
+  &--xxl {
+    font-size: var(--font-size-m);
+  }
+}
