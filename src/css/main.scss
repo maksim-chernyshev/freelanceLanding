@@ -1,5 +1,11 @@
-@import 'reset';
-@import 'fonts';
-@import 'variables';
-@import 'base';
-@import 'typography';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/typography';
+
+@import 'blocks/root';
+@import 'blocks/buttons';
+@import 'blocks/hero';
+@import 'blocks/cards';
+@import 'blocks/card';
+@import 'blocks/footer';

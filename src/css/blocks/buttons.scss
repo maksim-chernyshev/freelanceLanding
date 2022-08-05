@@ -1,0 +1,36 @@
+.button {
+  position: relative;
+  padding: 22px 38px;
+
+  font-family: 'Gotham Pro Medium', sans-serif;
+  font-size: var(--font-size-m);
+  line-height: 1;
+  text-decoration: none;
+  color: var(--black);
+
+  border-radius: 100px;
+  background-color: var(--yellow);
+  box-shadow: 5px 4px 0 0 var(--black);
+
+  @media(min-width: 1400px) {
+    padding: 40px 25px;
+
+    font-size: var(--font-size-xl);
+  }
+
+  &:hover {
+    background-color: var(--yellow-dark);
+    top: 2px;
+    left: 2px;
+
+    box-shadow: 3px 2px 0 0 var(--black);
+  }
+
+  &:active {
+    background-color: var(--yellow-dark);
+    top: 5px;
+    left: 4px;
+
+    box-shadow: none;
+  }
+}

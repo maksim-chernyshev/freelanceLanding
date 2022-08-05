@@ -1,0 +1,21 @@
+.root {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+  font-family: 'Gotham Pro Regular', sans-serif;
+  line-height: var(--font-line-height-m);
+  color: var(--black);
+
+  background-color: var(--gray-light);
+
+  @media(min-width: 768px) {
+    padding: 32px;
+  }
+
+  @media(min-width: 1400px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,231 @@
+.card {
+  position: relative;
+
+  padding: 22px 20px 24px;
+  box-sizing: border-box;
+
+  border-radius: 24px;
+  background-color: var(--white);
+  background-repeat: no-repeat;
+
+  @media(min-width: 768px) {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+  }
+
+  @media(min-width: 1400px) {
+    padding: 40px;
+  }
+
+  &--author24 {
+    border: 2px solid var(--yellow);
+    background-image: url('../img/img-dog-ok.png'),
+                      url('../img/img-a24.png');
+    background-position: left -40px bottom -5px, right -55px bottom -50px;
+    background-size: 270px auto, 240px auto;
+
+    @media(min-width: 1400px) {
+      background-position: left -70px bottom -5px, right -60px bottom -200px;
+      background-size: auto 320px, 450px auto;
+    }
+  }
+
+  &--studlance {
+    background-image: url('../img/img-studlance.png'),
+                      url('../img/img-studlance-2.png');
+    background-position: right -225px bottom -18px, left -25px bottom -130px;
+    background-size: auto 270px, 270px auto;
+
+    @media(min-width: 1400px) {
+      background-position: right -130px bottom -25px, left -40px bottom -320px;
+      background-size: auto 400px, 500px auto;
+    }
+  }
+
+  &--fl {
+    background-image: url('../img/img-fl.png');
+    background-position: center bottom -90px;
+    background-size: 300px auto;
+
+    @media(min-width: 768px) {
+      background-position: left 20px bottom -130px;
+      background-size: auto 400px;
+    }
+
+    @media(min-width: 1400px) {
+      background-position: center bottom -120px;
+      background-size: auto;
+    }
+  }
+
+  &--freelance {
+    background-image: url('../img/img-freelance.png');
+    background-position: right -165px bottom -80px;
+    background-size: auto 350px;
+
+    @media(min-width: 768px) {
+      background-position: right -120px bottom -70px;
+      background-size: auto 350px;
+    }
+
+    @media(min-width: 1400px) {
+      background-position: right -100px bottom -100px;
+      background-size: auto;
+    }
+  }
+}
+
+.card__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 8px;
+  column-gap: 16px;
+  margin-bottom: 16px;
+
+  @media(min-width: 1400px) {
+    column-gap: 20px;
+  }
+}
+
+.card__logo {
+  width: 32px;
+  height: 32px;
+  grid-column: 1 / 1;
+
+  @media(min-width: 1400px) {
+    width: 76px;
+    height: 76px;
+    grid-row: 1 / 3;
+  }
+}
+
+.card__title {
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+.card__salary {
+  grid-column: 1 / 3;
+  grid-row: 2/ 3;
+
+  @media(min-width: 1400px) {
+    grid-column: 2 / 3;
+  }
+}
+
+.card__rating {
+  grid-column: 3 / 4;
+  align-self: center;
+  padding-left: 28px;
+
+  background-image: url('../img/icon-star.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+
+  @media(min-width: 1400px) {
+    padding-left: 46px;
+  }
+}
+
+.card__achievement {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+
+  padding: 4px 12px;
+
+  border-radius: 100px;
+  border: 2px solid var(--yellow);
+  background-color: var(--white);
+
+  @media(min-width: 1400px) {
+    top: -22px;
+    right: 40px;
+
+    padding: 8px 16px;
+  }
+}
+
+.card__text {
+  padding-bottom: 200px;
+}
+
+.card__link {
+  top: -4px;
+  display: block;
+  width: calc(100% - 8px);
+  box-sizing: border-box;
+
+  text-align: center;
+
+  box-shadow: 7px 4px 0 0 var(--black);
+
+  @media(min-width: 768px) {
+    align-self: end;
+  }
+
+  @media(min-width: 1400px) {
+    width: max-content;
+    justify-self: end;
+  }
+
+
+
+  &:hover {
+    top: -2px;
+    left: 4px;
+
+    box-shadow: 3px 2px 0 0 var(--black);
+  }
+
+  &:active {
+    top: 0;
+    left: 7px;
+
+    box-shadow: none;
+  }
+}
+
+.kampus-card {
+  background-image: url('../img/img-kampus.png'),
+                    url('../img/img-kampus-2.png');
+  background-position: left -190px bottom -10px, right -12px bottom -145px;
+  background-size: auto 300px, 200px auto;
+
+  @media(min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    background-position: right -120px bottom -10px, right 90px bottom -120px;
+    background-size: auto 300px, 200px auto;
+
+    &__header {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin-bottom: 18px;
+    }
+
+    &__text {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      padding-bottom: 48px;
+    }
+
+    &__link {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  }
+
+  @media(min-width: 1400px) {
+    background-position: right -180px top 20px,right 210px bottom -135px;
+    background-size: auto;
+
+    &__text {
+      padding-bottom: 40px;
+    }
+  }
+}

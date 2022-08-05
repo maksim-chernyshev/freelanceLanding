@@ -1,0 +1,51 @@
+.hero {
+  margin-bottom: 40px;
+  padding: 64px 20px 20px;
+
+  text-align: center;
+
+  border-radius: 24px;
+  background-color: var(--white);
+  background-image: url('../img/phone-1-small.png'),
+                    url('../img/phone-2-small.png');
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+
+  @media(min-width: 768px) {
+    padding: 128px 78px;
+
+    background-image: url('../img/phone-1-medium.png'),
+                      url('../img/phone-2-medium.png'),
+                      url('../img/phone-3-medium.png'),
+                      url('../img/phone-4-medium.png');
+    background-position: left top, left bottom, right top, right bottom;
+  }
+
+  @media(min-width: 1400px) {
+    padding: 152px 316px;
+
+    background-image: url('../img/phone-1-large.png'),
+                      url('../img/phone-2-large.png'),
+                      url('../img/phone-3-large.png'),
+                      url('../img/phone-4-large.png');
+    background-position: left top, left bottom, right top, right bottom;
+    background-size: 252px auto;
+  }
+}
+
+.hero__heading {
+  max-width: 500px;
+  margin: 0 auto 16px;
+  padding: 0 30px;
+
+  @media(min-width: 1400px) {
+    max-width: 100%;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+}
+
+.hero__text {
+  max-width: 550px;
+  margin: 0 auto;
+}

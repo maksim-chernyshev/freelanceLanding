@@ -1,0 +1,11 @@
+.footer {
+  margin-top: 24px;
+
+  @media(min-width: 1400px) {
+    margin-top: 80px;
+  }
+}
+
+.footer__copyright {
+  text-align: center;
+}
